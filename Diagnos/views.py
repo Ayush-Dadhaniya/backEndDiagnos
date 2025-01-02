@@ -13,6 +13,11 @@ with open('Diagnos/trained_models/heart_disease_model.sav', 'rb') as f:
 
 with open('Diagnos/trained_models/parkinsons_model.sav', 'rb') as f:
     parkinsons = pickle.load(f)
+    
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, world!")
 
 # Disable CSRF validation for testing (you can enable it later if needed)
 @csrf_exempt
